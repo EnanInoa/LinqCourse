@@ -93,6 +93,55 @@ int MaxPageCount() => booksCollection.Max(x => x.PageCount);
 Console.WriteLine(MaxPageCount());
 #endregion
 
+
+#region min & max (by)
+Book Min() => booksCollection.MinBy(x => x.PageCount > 0);
+
+Console.WriteLine(Min());
+
+
+Book Max() => booksCollection.MaxBy(x => x.PublishedDate);
+
+Console.WriteLine(Max());
+#endregion
+
+
+#region sum y aggregate
+int Sumar() => booksCollection.Where(x => x.PageCount >= 0 && x.PageCount <= 500).Sum(x => x.PageCount);
+
+Console.WriteLine(Sumar());
+
+
+// Book Max() => booksCollection.MaxBy(x => x.PublishedDate);
+
+// Console.WriteLine(Max());
+#endregion
+
+#region average
+double Ave() => booksCollection.Average(x => x.Title.Length);
+
+Console.WriteLine(Ave());
+
+
+// Book Max() => booksCollection.MaxBy(x => x.PublishedDate);
+
+// Console.WriteLine(Max());
+#endregion
+
+#region GroupBy
+List<IGrouping<int, Book>> Group() => booksCollection.Where(x => x.PublishedDate.Year >= 2000).GroupBy(x => x.PublishedDate.Year).ToList();
+
+Console.WriteLine(Group());
+
+#endregion
+
+#region GroupBy
+ILookup<char, Book> LookItUp() => booksCollection.OrderBy(x => x.Title).ToLookup(x => x.Title.FirstOrDefault(), x => x);
+
+Console.WriteLine(LookItUp());
+
+#endregion
+
 public class Animal  
 {
     public string Nombre { get; set; }

@@ -12,3 +12,4 @@ C:\Users\ADG\Downloads\Linq\Linq\obj\Debug\net8.0\refint\Linq.dll
 C:\Users\ADG\Downloads\Linq\Linq\obj\Debug\net8.0\Linq.pdb
 C:\Users\ADG\Downloads\Linq\Linq\obj\Debug\net8.0\Linq.genruntimeconfig.cache
 C:\Users\ADG\Downloads\Linq\Linq\obj\Debug\net8.0\ref\Linq.dll
+C:\Users\ADG\Downloads\Linq\Linq\obj\Debug\net8.0\Linq.sourcelink.json
